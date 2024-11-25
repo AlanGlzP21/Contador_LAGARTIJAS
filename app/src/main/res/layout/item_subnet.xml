@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/networkAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Network Address"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/usableHostRange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Usable Host Range"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/broadcastAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Broadcast Address"
+        android:textSize="14sp"/>
+</LinearLayout>

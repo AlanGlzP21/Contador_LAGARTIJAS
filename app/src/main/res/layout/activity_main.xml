@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Sección IPv4 -->
+    <TextView
+        android:id="@+id/tv_ipv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IPv4 Subnet Calculator"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Selección de Clase de Red -->
+    <RadioGroup
+        android:id="@+id/radioGroupClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_any"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Any"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/rb_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A" />
+
+        <RadioButton
+            android:id="@+id/rb_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B" />
+
+        <RadioButton
+            android:id="@+id/rb_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C" />
+    </RadioGroup>
+
+    <!-- Selección de Subred -->
+    <Spinner
+        android:id="@+id/spinner_subnet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/subnet_options" />
+
+    <!-- Input de dirección IP -->
+    <EditText
+        android:id="@+id/input_ipv4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="IP Address"
+        android:inputType="number"
+        android:digits="0123456789." />
+
+
+    <!-- Botones de calcular y limpiar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_calculate_ipv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate" />
+
+
+    </LinearLayout>
+
+    <!-- Sección IPv6 -->
+    <TextView
+        android:id="@+id/tv_ipv6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IPv6 Subnet Calculator"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingTop="24dp" />
+
+    <!-- Input Prefijo IPv6 -->
+    <Spinner
+        android:id="@+id/spinner_prefix_ipv6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/prefix_options" />
+
+    <!-- Input de dirección IPv6 -->
+    <EditText
+        android:id="@+id/input_ipv6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="IPv6 Address"
+        android:inputType="text" />
+
+    <!-- Botones de calcular y limpiar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_calculate_ipv6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate" />
+
+    </LinearLayout>
+</LinearLayout>
